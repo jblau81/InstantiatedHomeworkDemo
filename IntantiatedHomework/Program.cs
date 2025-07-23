@@ -27,7 +27,7 @@ namespace InstantiatedHomework
 
                 Console.Write("What is your age:");
                 string age = Console.ReadLine();
-
+                // luke i am your father
                 Console.Write("What is your street address:");
                 string streetAddress = Console.ReadLine();
 
@@ -58,7 +58,7 @@ namespace InstantiatedHomework
                     address.State = state;
                     address.PostalCode = postalCode;
 
-                    // test comment
+                    
                 }
 
             } while (firstName.ToLower() != "exit");
