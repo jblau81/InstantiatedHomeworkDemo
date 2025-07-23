@@ -58,7 +58,7 @@ namespace InstantiatedHomework
                     address.State = state;
                     address.PostalCode = postalCode;
 
-
+                    // test comment
                 }
 
             } while (firstName.ToLower() != "exit");
