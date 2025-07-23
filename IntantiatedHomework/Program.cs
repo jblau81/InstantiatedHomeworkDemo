@@ -31,7 +31,7 @@ namespace InstantiatedHomework
                 lastName = Console.ReadLine();
 
                 Console.Write("What is your age:");
-                age = int.Parse(Console.ReadLine()); 
+                string age = Console.ReadLine();
 
                 Console.Write("What is your street address:");
                 streetAddress = Console.ReadLine();
@@ -77,8 +77,8 @@ namespace InstantiatedHomework
                     wantToExit = true;
                 }
 
-                // test comment
-            
+                    // test comment
+                }
 
         } while (wantToExit != true);
 
