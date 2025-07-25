@@ -12,40 +12,74 @@ namespace InstantiatedHomework
         static void Main(string[] args)
         {
             List<PersonModel> people = new List<PersonModel>();
-            string firstName= "";
+            string firstName = "";
+            string lastName = "";
+            int age = 0;
+            string streetAddress = "";
+            string city = "";
+            string state = "";
+            int zipCode = 0;
+            string choice = "";
 
-            
-            
-
+            bool wantToExit = false;
             do
             {
                 Console.Write("What is your first name (or type exit to stop):");
                 firstName = Console.ReadLine();
 
                 Console.Write("What is your last name: ");
-                string lastName = Console.ReadLine();
+                lastName = Console.ReadLine();
 
                 Console.Write("What is your age:");
+
+                age = int.Parse(Console.ReadLine()); 
+
                 string age = Console.ReadLine();
-                // luke i am your father
+
                 Console.Write("What is your street address:");
-                string streetAddress = Console.ReadLine();
+                streetAddress = Console.ReadLine();
 
                 Console.Write("What is your city:");
-                string city = Console.ReadLine();
+                city = Console.ReadLine();
 
                 Console.Write("What is your state:");
-                string state = Console.ReadLine();
+                state = Console.ReadLine();
 
                 Console.Write("What is your zip code:");
-                string postalCode = Console.ReadLine();
+                zipCode = int.Parse(Console.ReadLine());
+
+                Console.Write("Do you want to stop adding people:(yes/no) ");
+                choice = Console.ReadLine();
 
 
 
-               
+                //Console.WriteLine($"First Name: {personOne.FirstName} Last Name: {personOne.LastName} Age: {personOne.Age} ");
+                //Console.WriteLine($"Street: {addressOne.StreetAddress} " +
+                //                    $"City:{addressOne.City} " +
+                //                    $"State: {addressOne.State} " +
+                //                    $"Zip Code: {addressOne.PostalCode}");
 
-                if (firstName.ToLower() != "exit")
+                //ProcessPerson.GreetPerson(personOne);
+
+
+
+                PersonModel person1 = new PersonModel();
+                person1.FirstName = firstName;
+                person1.LastName = lastName;
+                person1.Age = age;
+                people.Add(person1);
+
+                AddressModel address = new AddressModel();
+                address.StreetAddress = streetAddress;
+                address.City = city;
+                address.State = state;
+                address.PostalCode = zipCode;
+                
+                if (choice.ToLower() == "yes")
                 {
+<<<<<<< HEAD
+                    wantToExit = true;
+=======
                     PersonModel person1 = new PersonModel();
                     person1.FirstName = firstName;
                     person1.LastName = lastName;
@@ -59,16 +93,20 @@ namespace InstantiatedHomework
                     address.PostalCode = postalCode;
 
                     
+>>>>>>> 38e1947fed6351b482ecf7c6325e1a4eb98a8dde
                 }
 
-            } while (firstName.ToLower() != "exit");
+                // test comment
+            
+
+        } while (wantToExit != true);
 
             foreach (PersonModel p in people)
             {
                 ProcessPerson.GreetPerson(p);
             }
 
-            Console.ReadLine();
+    Console.ReadLine();
         }
     }
 }
