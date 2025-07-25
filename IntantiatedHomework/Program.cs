@@ -31,6 +31,9 @@ namespace InstantiatedHomework
                 lastName = Console.ReadLine();
 
                 Console.Write("What is your age:");
+
+                age = int.Parse(Console.ReadLine()); 
+
                 string age = Console.ReadLine();
 
                 Console.Write("What is your street address:");
@@ -74,11 +77,27 @@ namespace InstantiatedHomework
                 
                 if (choice.ToLower() == "yes")
                 {
+<<<<<<< HEAD
                     wantToExit = true;
+=======
+                    PersonModel person1 = new PersonModel();
+                    person1.FirstName = firstName;
+                    person1.LastName = lastName;
+                    person1.Age = age;
+                    people.Add(person1);
+
+                    AddressModel address = new AddressModel();
+                    address.StreetAddress = streetAddress;
+                    address.City = city;
+                    address.State = state;
+                    address.PostalCode = postalCode;
+
+                    
+>>>>>>> 38e1947fed6351b482ecf7c6325e1a4eb98a8dde
                 }
 
-                    // test comment
-                }
+                // test comment
+            
 
         } while (wantToExit != true);
 
